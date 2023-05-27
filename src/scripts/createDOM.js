@@ -18,6 +18,18 @@ export class createDOM {
         tasks.forEach(item => {
             tasksDOM.appendChild(this.createTaskDOM(item))
         })
+        this.displayData()
+    }
+
+    displayData() {
+        const months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+        const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        const date = document.getElementById("today-date")
+        let d = new Date()
+        var day = d.getDate();
+        var today = days[d.getDay()];
+        var month = months[d.getMonth()];
+	    date.innerHTML = `${today}, ${month} ${day}`;
     }
 
     createTaskDOM(task) {
