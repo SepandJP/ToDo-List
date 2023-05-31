@@ -26,19 +26,14 @@
   },
   "homepage": "https://github.com/SepandJP/todo-js#readme",
   "devDependencies": {
-    "@babel/core": "^7.21.4",
-    "@babel/preset-env": "^7.21.4",
-    "@webpack-cli/generators": "^3.0.2",
-    "babel-loader": "^9.1.2",
-    "css-loader": "^6.7.3",
-    "nodemon": "^2.0.22",
-    "style-loader": "^3.3.2",
-    "webpack": "^5.80.0",
-    "webpack-cli": "^5.0.2",
-    "webpack-dev-server": "^4.13.3",
-    "workbox-webpack-plugin": "^6.5.4"
+    "nodemon": "^2.0.22"
   },
   "dependencies": {
-    "express": "^4.18.2"
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.3.3"
   }
 }
