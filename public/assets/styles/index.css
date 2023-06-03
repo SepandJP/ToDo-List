@@ -20,7 +20,7 @@ body {
 header {
 	z-index: 100;
 	position: relative;
-	background-image: url(/images/northern-lights-water-trees-iphone-backgrounds-blue-purple-pink-skies.jpg);
+	background-image: url(/static/assets/images/northern-lights-water-trees-iphone-backgrounds-blue-purple-pink-skies.jpg);
 	background-repeat: no-repeat;
 	background-size: auto;
 	width: 100%;

@@ -1,15 +1,9 @@
 {
-  "name": "todo-js",
+  "name": "todo",
   "version": "1.0.0",
   "description": "A simple todo list project with vanilla js",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack --config webpack.config.js",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch",
-    "serve": "webpack serve"
   },
   "repository": {
     "type": "git",

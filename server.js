@@ -15,10 +15,10 @@ startApplication();
 //     if (err) throw err;
 //     console.log(res);
 // });
-const query = "SELECT title FROM tasks";
-const sql = async () => {
-   const [titles] = await db.query(query)
-   const [ids] = await db.query("SELECT * FROM tasks WHERE title = ?", [titles[2].title]);
-    return ids;
-};
-sql().then(ids => {console.log(ids)}).catch(err => {console.log(err)});
+// const query = "SELECT title FROM tasks";
+// const sql = async () => {
+//    const [titles] = await db.query(query)
+//    const [ids] = await db.query("SELECT * FROM tasks WHERE title = ?", [titles[2].title]);
+//     return ids;
+// };
+// sql().then(ids => {console.log(ids)}).catch(err => {console.log(err)});

@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{{title}}}</title>
+    <script src="/static/assets/scripts/main.js" async></script>
+	<link rel="stylesheet" href="/static/assets/styles/index.css">
+	<title>CRUD ToDo</title>
 </head>
 <body>
-    {{{body}}}
+    <div class="container">
+        
+			<header>
+				<div>
+					<button id="#refresh">
+						<div id="refresh-button">
+							<object id="#refresh-button" data="/static/assets/images/refresh-icon.svg" type="image/svg+xml"></object>
+						</div>
+					</button>
+				</div>
+				<div id="today-date"></div>
+			</header>
+		
+			<main>
+				<div id="content">
+					<ul id="todo-tasks-list">
+                        {{{ body }}}
+                    </ul>
+				</div>
+				
+				<div id="add-task-section">
+					<form id="add-task-form">
+						<button id="add-task-button">
+							<i>
+								<object data="/static/assets/images/add-icon.svg" type="image/svg+xml"></object>
+							</i>
+						</button>
+							<input type="text" name="newTaskTitle" id="input-task" placeholder="Add a Item">
+					</form>
+				</div>
+			</main>
+		
+			<footer>	
+			</footer>
+    </div>
 </body>
 </html>
