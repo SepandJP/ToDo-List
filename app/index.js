@@ -1,10 +1,7 @@
 const express = require('express');
 const app = express();
 require('./bootstrap')(app);
-
-app.get('/', (req, res) => {
-    res.render('home', {layout: 'main'});
-});
+require('./routes')(app);
 
 module.exports = () => {
     app.listen(process.env.APP_PORT, () => {
