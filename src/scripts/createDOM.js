@@ -2,9 +2,9 @@
  * Show tasks with DOM
  */
 
-const trash = '<img src="images/trash-icon.svg" alt="trash task">'
-const check = '<img src="images/check-icon.svg" alt="check done task">'
-const checked = '<img src="images/checked-icon.svg" alt="uncheck undone task">'
+// const trash = '<img src="images/trash-icon.svg" alt="trash task">'
+// const check = '<img src="images/check-icon.svg" alt="check done task">'
+// const checked = '<img src="images/checked-icon.svg" alt="uncheck undone task">'
 
 export class createDOM {
     constructor(storage, fetch) {
@@ -33,16 +33,16 @@ export class createDOM {
     }
 
     createTaskDOM(task) {
-        const taskElement = document.createElement('li')
-        const checkTask = document.createElement('button')
-        const taskTitle = document.createElement('p')
-        const trashTask = document.createElement('button')
+        // const taskElement = document.createElement('li')
+        // const checkTask = document.createElement('button')
+        // const taskTitle = document.createElement('p')
+        // const trashTask = document.createElement('button')
 
-        taskElement.setAttribute('class', 'items')
-        checkTask.innerHTML = task.done ? checked : check
-        taskTitle.setAttribute('class', `${task.done ? 'done-item' : 'undone-item'}`)
-        taskTitle.textContent = task.title
-        trashTask.innerHTML = trash
+        // taskElement.setAttribute('class', 'items')
+        // checkTask.innerHTML = task.done ? checked : check
+        // taskTitle.setAttribute('class', `${task.done ? 'done-item' : 'undone-item'}`)
+        // taskTitle.textContent = task.title
+        // trashTask.innerHTML = trash
 
         checkTask.addEventListener('click', () => {
             this.storage.toggleTasks(task.id)
@@ -53,9 +53,9 @@ export class createDOM {
             this.displayTasks(this.fetch.getTasksFromLocalStorage())
         })
 
-        taskElement.appendChild(checkTask)
-        taskElement.appendChild(taskTitle)
-        taskElement.appendChild(trashTask)
+        // taskElement.appendChild(checkTask)
+        // taskElement.appendChild(taskTitle)
+        // taskElement.appendChild(trashTask)
 
         return taskElement
     }
