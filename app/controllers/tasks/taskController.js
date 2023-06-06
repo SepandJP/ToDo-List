@@ -5,11 +5,23 @@ exports.index = async (req, res) => {
     res.render('home', {layout: 'task', tasks});
 };
 exports.store = async (req, res) => {
+    let errors = {
+        title: []
+    };
+    let hasError = false;
     const newTaskData = {
         id : crypto.randomUUID(),
         title : req.body.newTaskTitle
     };
-    const result = await taskModel.create(newTaskData);
-    const tasks = await taskModel.getAll();
-    res.redirect('/tasks');
+    if (newTaskData.title.trim().length < 1) {
+        hasError = true;
+        errors.title.push('The title cannot be empty.');
+    }
+    if (hasError) {
+        const tasks = await taskModel.getAll();
+        res.render('home', {layout: 'task', tasks, errors, hasError});
+    } else {
+        const result = await taskModel.create(newTaskData);
+        res.redirect('/tasks');
+    }
 };

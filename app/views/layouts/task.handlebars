@@ -24,6 +24,13 @@
 		
 			<main>
 				<div id="content">
+					{{#if hasError}}
+    					<div class="error">
+						{{#each errors}}
+    						<p class="errors">{{this}}</p>
+						{{/each}}
+    					</div>
+					{{/if}}
 					<ul id="todo-tasks-list">
                         {{{ body }}}
                     </ul>
@@ -36,7 +43,7 @@
 								<object data="/static/assets/images/add-icon.svg" type="image/svg+xml"></object>
 							</i>
 						</button>
-							<input type="text" name="newTaskTitle" id="input-task" placeholder="Add a Item" required>
+							<input type="text" name="newTaskTitle" id="input-task" placeholder="Add a Item">
 					</form>
 				</div>
 			</main>
