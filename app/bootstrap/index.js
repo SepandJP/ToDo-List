@@ -1,8 +1,10 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
+const bodyParser = require('body-parser');
 module.exports = app => {
-    
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: false }));
     app.engine('handlebars', hbs.engine({defaultLayout: false}));
     app.set('view engine', 'handlebars');
     app.set('views', path.join(__dirname, '../views'));

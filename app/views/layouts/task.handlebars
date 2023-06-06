@@ -30,13 +30,13 @@
 				</div>
 				
 				<div id="add-task-section">
-					<form id="add-task-form">
+					<form id="add-task-form" action="/tasks/store" method="post">
 						<button id="add-task-button">
 							<i>
 								<object data="/static/assets/images/add-icon.svg" type="image/svg+xml"></object>
 							</i>
 						</button>
-							<input type="text" name="newTaskTitle" id="input-task" placeholder="Add a Item">
+							<input type="text" name="newTaskTitle" id="input-task" placeholder="Add a Item" required>
 					</form>
 				</div>
 			</main>
