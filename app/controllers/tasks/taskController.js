@@ -25,3 +25,8 @@ exports.store = async (req, res) => {
         res.redirect('/tasks');
     }
 };
+exports.remove = async(req, res) => {
+    const result = await taskModel.delete(req.body.tId);
+    console.log(result);
+    res.redirect('/tasks');
+};

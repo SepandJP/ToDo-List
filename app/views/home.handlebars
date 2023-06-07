@@ -1,18 +1,27 @@
 
 {{#each tasks}}
 <li class="items">
-    <button>
-        {{#if this.status}}
-            <img src="/static/assets/images/checked-icon.svg" alt="uncheck undone task">
-        {{else}}
-            <img src="/static/assets/images/check-icon.svg" alt="uncheck undone task">
-        {{/if}}
-    </button>
+    <div class="inline-form">
+        <form action="/tasks/check" method="post">
+            <button type="submit">
+                {{#if this.status}}
+                    <img src="/static/assets/images/checked-icon.svg" alt="uncheck undone task">
+                {{else}}
+                    <img src="/static/assets/images/check-icon.svg" alt="uncheck undone task">
+                {{/if}}
+            </button>
+        </form>
+    </div>
     <p class="{{#if this.status}} done-item {{else}} undone-item {{/if}} " >
         {{ this.title }}
     </p>
-    <button>
-        <img src="/static/assets/images/trash-icon.svg" alt="trash task">
-    </button>
+    <div class="inline-form">
+        <form action="/tasks/remove" method="post">
+            <input type="text" name="tId" value="{{this.id}}" hidden>
+            <button type="submit">
+                <img src="/static/assets/images/trash-icon.svg" alt="trash task">
+            </button>
+        </form>
+    </div>
 </li>
 {{/each}}
