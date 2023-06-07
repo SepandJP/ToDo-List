@@ -3,6 +3,7 @@
 <li class="items">
     <div class="inline-form">
         <form action="/tasks/check" method="post">
+        <input type="text" name="tId" value="{{this.id}}" hidden>
             <button type="submit">
                 {{#if this.status}}
                     <img src="/static/assets/images/checked-icon.svg" alt="uncheck undone task">

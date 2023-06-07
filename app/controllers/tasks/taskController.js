@@ -27,6 +27,11 @@ exports.store = async (req, res) => {
 };
 exports.remove = async(req, res) => {
     const result = await taskModel.delete(req.body.tId);
-    console.log(result);
+    res.redirect('/tasks');
+};
+exports.check = async(req, res) => {
+    const taskId = req.body.tId;
+    const taskStatus = await taskModel.getStatus(taskId);
+    const result = await taskModel.check(taskId, !taskStatus[0].status);
     res.redirect('/tasks');
 };
