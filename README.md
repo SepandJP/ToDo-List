@@ -1,16 +1,12 @@
-# todo-js
-A simple todo list project with vanilla js
-
-This project has been created using **webpack-cli**, you can now run
-
-```
-npm run build
-```
-
-or
-
-```
-yarn build
-```
-
-to bundle your application
+# ابزار ToDO-List
+برای مشاهده لینک روبرو را کلیک کنید: 
+ **[مشاهده آنلاین](https://todo-list.iran.liara.run/tasks)**
+ <br />
+ <br />
+ *نسخه اولیه و در حال توسعه*
+ 
+ ## امکانات
+- اضافه کردن تسک‌ها
+- علامت زدن تسک‌های انجام شده
+- حذف تسک‌ها
+- جلوگیری از ثبت عنوان خالی برای تسک‌ها
