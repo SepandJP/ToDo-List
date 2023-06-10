@@ -1,10 +1,13 @@
 const taskModel = require('../../models/taskModel');
 const crypto = require('crypto');
+const basicController = require('../basicController');
 exports.index = async (req, res) => {
+    const date = basicController.date;
     const tasks = await taskModel.getAll();
-    res.render('home', {layout: 'task', tasks});
+    res.render('home', {layout: 'task', tasks, date});
 };
 exports.store = async (req, res) => {
+    const date = basicController.date;
     let errors = {
         title: []
     };
@@ -19,7 +22,7 @@ exports.store = async (req, res) => {
     }
     if (hasError) {
         const tasks = await taskModel.getAll();
-        res.render('home', {layout: 'task', tasks, errors, hasError});
+        res.render('home', {layout: 'task', tasks, errors, hasError, date});
     } else {
         const result = await taskModel.create(newTaskData);
         res.redirect('/tasks');
