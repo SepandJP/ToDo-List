@@ -11,6 +11,9 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
+DROP DATABASE IF EXISTS `todo_node`;
+CREATE DATABASE IF NOT EXISTS `todo_node` CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+use `todo_node`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -40,8 +43,6 @@ CREATE TABLE `tasks` (
 -- Dumping data for table `tasks`
 --
 
-INSERT INTO `tasks` (`id`, `user_id`, `status`, `created_at`, `updated_at`, `title`) VALUES
-('ba339d8d-82bb-434e-922c-f8d49fbf', NULL, 0, '2023-06-10 06:21:42', '2023-06-10 06:21:42', 'task1');
 
 --
 -- Indexes for dumped tables
